@@ -1,0 +1,38 @@
+{
+  "name": "lfbn/json-resume-validator",
+  "description": "Validate your JSON Resume",
+  "version": "0.0.1",
+  "keywords": [
+    "JSON Resume", "JSON Schema"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Luís Nóbrega",
+      "email": "luis.barros.nobrega@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "justinrainbow/json-schema": "^5.2",
+    "adbario/php-dot-notation": "^2.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "8.4.2",
+    "symfony/var-dumper": "^4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lfbn\\JsonResumeValidator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Lfbn\\JsonResumeValidator\\Tests\\Integration\\": "tests/integration"
+    }
+  },
+  "scripts": {
+    "tests": "php vendor/bin/phpunit"
+  }
+}
