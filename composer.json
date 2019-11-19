@@ -33,6 +33,6 @@
     }
   },
   "scripts": {
-    "tests": "php vendor/bin/phpunit"
+    "tests": "php vendor/bin/phpunit --testdox"
   }
 }

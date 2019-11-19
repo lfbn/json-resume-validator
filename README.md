@@ -36,3 +36,13 @@ $resume->isValid();
 Available parameters:
 
 * mandatory_fields: they should be provided using dot notation. For example, to make name from basics mandatory, send an element with a string "basics.name".
+
+## Integration Tests
+
+This package has integration tests that use several text files to test if the behavior is as expected. 
+
+To execute them, just run:
+
+```php
+composer tests
+```

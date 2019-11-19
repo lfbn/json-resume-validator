@@ -17,7 +17,7 @@ class InvalidFileTest extends BaseTest
      * @throws FileDoesNotExistsException
      * @throws FileIsNotAValidJsonException
      */
-    public function testNotExistingFile(): void
+    public function testItShouldValidateAtLoadWhenNotExistingFile(): void
     {
         $this->expectException(FileDoesNotExistsException::class);
 
@@ -30,7 +30,7 @@ class InvalidFileTest extends BaseTest
      * @throws FileDoesNotExistsException
      * @throws FileIsNotAValidJsonException
      */
-    public function testFileIsEmpty(): void
+    public function testItShouldValidateAtLoadWhenFileIsEmpty(): void
     {
         $this->expectException(FileIsNotAValidJsonException::class);
 
@@ -43,7 +43,7 @@ class InvalidFileTest extends BaseTest
      * @throws FileDoesNotExistsException
      * @throws FileIsNotAValidJsonException
      */
-    public function testFileIsInvalidJson(): void
+    public function testItShouldValidateAtLoadWhenFileIsInvalidJson(): void
     {
         $this->expectException(FileIsNotAValidJsonException::class);
 

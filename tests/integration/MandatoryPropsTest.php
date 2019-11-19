@@ -21,7 +21,7 @@ class MandatoryPropsTest extends BaseTest
      * @throws MandatoryFieldsMissingException
      * @throws SchemaViolationException
      */
-    public function testDoesNotHaveMandatoryProps(): void
+    public function testItShouldValidateIfDoesNotHaveMandatoryProps(): void
     {
         $this->expectException(MandatoryFieldsMissingException::class);
 
@@ -48,7 +48,7 @@ class MandatoryPropsTest extends BaseTest
      * @throws MandatoryFieldsMissingException
      * @throws SchemaViolationException
      */
-    public function testHasAllMandatoryProps(): void
+    public function testItShouldBeValidIfItHasAllMandatoryPropsFilled(): void
     {
         $config = [
             'mandatory_fields' => [

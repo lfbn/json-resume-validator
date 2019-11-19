@@ -21,7 +21,7 @@ class SchemaViolationTest extends BaseTest
      * @throws SchemaViolationException
      * @throws MandatoryFieldsMissingException
      */
-    public function testDoesNotHaveMandatoryProps(): void
+    public function testItShouldValidateIfIsNotComplyingToSchema(): void
     {
         $this->expectException(SchemaViolationException::class);
 
@@ -38,7 +38,7 @@ class SchemaViolationTest extends BaseTest
      * @throws MandatoryFieldsMissingException
      * @throws SchemaViolationException
      */
-    public function testHasAllMandatoryProps(): void
+    public function testItShouldBeValidIfCompliesToSchema(): void
     {
         $resume = JsonResumeValidator::load(
             $this->getDataFullPath('valid/complete.json')
