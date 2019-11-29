@@ -5,10 +5,10 @@ namespace Lfbn\JsonResumeValidator\Exception\Validation;
 use Exception;
 
 /**
- * Class MandatoryFieldsMissingException
+ * Class InvalidCountryCodeException
  * @package Lfbn\JsonResumeValidator\Exception
  */
-class MandatoryFieldsMissingException extends Exception
+class InvalidCountryCodeException extends Exception
 {
 
 }

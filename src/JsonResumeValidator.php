@@ -4,6 +4,7 @@ namespace Lfbn\JsonResumeValidator;
 
 use Lfbn\JsonResumeValidator\Exception\FileDoesNotExistsException;
 use Lfbn\JsonResumeValidator\Exception\FileIsNotAValidJsonException;
+use Lfbn\JsonResumeValidator\Exception\Validation\InvalidCountryCodeException;
 use Lfbn\JsonResumeValidator\Exception\Validation\MandatoryFieldsMissingException;
 use Lfbn\JsonResumeValidator\Exception\Validation\SchemaViolationException;
 use Lfbn\JsonResumeValidator\Validator\ValidationJsonResumeChain;
@@ -32,6 +33,9 @@ class JsonResumeValidator
     }
 
     /**
+     * Allows you to get a JsonResumeValidator instance. With this you can validate your JSON Resume. Notice that
+     * if the file failed to be read then, it throws one of the exceptions below.
+     *
      * @param string $jsonResumeFilePathOrUrl
      * @param array $config
      * @return JsonResumeValidator
@@ -75,6 +79,7 @@ class JsonResumeValidator
      * @return bool
      * @throws MandatoryFieldsMissingException
      * @throws SchemaViolationException
+     * @throws InvalidCountryCodeException
      */
     public function isValid(): bool
     {

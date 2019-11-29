@@ -2,10 +2,11 @@
 
 This is a package who validates if a Resume is in JSON Resume format. It also validates if any desired properties are not empty.
 
-The validations that makes are, if:
+The validations that makes are:
 
-- It complies with JSON Schema of JSON Resume.
-- It has certain fields filled in. This is configurable.
+- If complies with JSON Schema of JSON Resume.
+- If has certain fields filled in. This is configurable.
+- If the country code (basics.countryCode) is in ISO-3166-1 ALPHA-2 format. If this field is empty, is not validated.
 
 ## Installing
 

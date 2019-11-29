@@ -3,7 +3,6 @@
 namespace Lfbn\JsonResumeValidator\Exception\Validation;
 
 use Exception;
-use Throwable;
 
 /**
  * Class SchemaViolationException
