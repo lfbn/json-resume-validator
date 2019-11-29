@@ -11,3 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integration tests.
 - This CHANGELOG file to hopefully serve as an evolving example of a
   standardized open source project CHANGELOG.
+
+## [0.0.2] - 2019-11-29
+### Added
+- Published on Packagist. Added to README.md how to install it using composer.

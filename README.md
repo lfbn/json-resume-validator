@@ -2,10 +2,16 @@
 
 This is a package who validates if a Resume is in JSON Resume format. It also validates if any desired properties are not empty.
 
-The validations it makes are, if:
+The validations that makes are, if:
 
 - It complies with JSON Schema of JSON Resume.
-- It has certain fields filled in. These are configurable.
+- It has certain fields filled in. This is configurable.
+
+## Installing
+
+```
+composer require lfbn/json-resume-validator
+```
 
 ## Usage
 
@@ -35,7 +41,7 @@ $resume->isValid();
 
 Available parameters:
 
-* mandatory_fields: they should be provided using dot notation. For example, to make name from basics mandatory, send an element with a string "basics.name".
+* mandatory_fields: they should be provided using dot notation. For example, to make name from basics mandatory, send a string "basics.name".
 
 ## Integration Tests
 

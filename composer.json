@@ -1,7 +1,7 @@
 {
   "name": "lfbn/json-resume-validator",
   "description": "Validate your JSON Resume",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "JSON Resume", "JSON Schema"
   ],
