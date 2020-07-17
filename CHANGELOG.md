@@ -18,4 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.3] - 2019-11-29
 ### Added
-- Added a new validator to check if country code is in the format ISO-3166-1 ALPHA-2. 
+- Added a new validator to check if country code is in the format ISO-3166-1 ALPHA-2.
+
+## [0.0.4] - 2020-00-00
+## Refactor
+- Moved the unit tests to the root folder of tests.
+### Added
+- Added a new validator to check if country code is in the format ISO-3166-1 ALPHA-2.
