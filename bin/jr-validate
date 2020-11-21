@@ -1,0 +1,52 @@
+#!/usr/bin/php
+<?php
+
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$climate = new League\CLImate\CLImate;
+
+$climate->out(PHP_EOL);
+$climate->bold('How are you doing? Don\'t answer, is a rhetorical question.');
+$climate->out(PHP_EOL);
+
+$responseIsValid = false;
+while (!$responseIsValid) {
+    $input = $climate->input(
+        'Place the absolute path for the JSON resume file to validate:'
+    );
+    $response = $input->prompt();
+    if (!$response || !file_exists($response)) {
+        $climate->out(PHP_EOL);
+        $climate->error(
+            'The file path you provided does not exists. Please try again.'
+        );
+        continue;
+    }
+    $responseIsValid = true;
+}
+
+$climate->out(PHP_EOL);
+
+$validator = Lfbn\JsonResumeValidator\JsonResumeValidator::load($response);
+
+try {
+    $isValid = $validator->isValid();
+} catch (\Throwable $exception) {
+    $climate->error(
+        'The JSON Resume file is not valid. Error: '.$exception->getMessage()
+    );
+    return;
+}
+
+if ($isValid) {
+    $climate->bold('The JSON Resume file is valid. Congrats.');
+    return;
+}
+
+$climate->error(
+    'The JSON Resume file is not valid. We don\'t know why. Sorry.'
+);
